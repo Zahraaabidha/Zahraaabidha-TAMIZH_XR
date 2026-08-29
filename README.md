@@ -1,68 +1,79 @@
-# XR Home Interface – Passthrough Simulation
+# 🥽 XR Home Interface — Passthrough Simulation
 
-## Overview
+A Unity-based XR-style home interface featuring interactive system controls, live date and time, simulated passthrough behaviour, and webcam-based environment simulation.
 
-This project is a Unity-based implementation of an **XR-style Home Screen Interface** with **passthrough simulation**.
-
-The focus of the project is on **UI interaction**, **runtime system updates**, and **clear separation of logic**, rather than hardware-dependent XR features.
+> 🎮 Built with Unity and C# with a focus on interactive UI, runtime systems, modular scripting, and XR-inspired experiences.
 
 ---
 
-## Problem Statement
+## ✨ Overview
 
-The objective was to design a single home screen similar to an XR system menu that includes:
+This project explores the design of an **XR-style home interface** inspired by system menus used in immersive environments.
 
-* Multiple app buttons (dummy apps allowed)
-* Volume and brightness controls
-* A passthrough toggle
-* Live system date and time that updates automatically at runtime
+The interface brings together application shortcuts, system controls, live information, and a passthrough mode within a single interactive screen.
 
-Since real XR passthrough cannot be visualized in the Unity Editor, the project also required a **visual simulation** for non-XR systems.
+Because real XR passthrough hardware cannot be directly visualized in the Unity Editor, the project includes a **webcam-based passthrough simulation** that allows the concept to be demonstrated on a standard computer.
 
 ---
 
-## Key Features
+## 🎮 Features
 
-### 1. XR-Style Home Screen UI
+### 🏠 XR-Style Home Screen
+- Unified home screen inspired by XR system interfaces
+- Interactive application buttons
+- Brightness controls
+- Volume controls
+- Clean and minimal UI layout
 
-* Single unified home screen layout
-* Dummy app buttons to simulate an XR menu
-* Brightness controls implemented at the UI level
-* Clean and minimal interface design
+### 🕒 Live Date & Time
+- Displays the current system date and time
+- Automatically updates at runtime
+- Requires no manual refresh
 
----
+### 👁️ Passthrough Toggle
+- Interactive passthrough ON/OFF toggle
+- Simulates OpenXR passthrough behaviour
+- Logs the current passthrough state at runtime
 
-### 2. Live Date & Time
-
-* Displays the **current system date and time**
-* Updates automatically at runtime
-* No manual refresh or button-based update is used
-
----
-
-### 3. Passthrough Toggle (OpenXR Logic – Simulated)
-
-* A single passthrough toggle button
-* Logs clear **ON / OFF states** in the console to simulate OpenXR passthrough behavior
-* Designed to be hardware-independent
-
----
-
-### 4. Webcam-Based Passthrough Simulation
-
-* Uses Unity’s `WebCamTexture`
-* Webcam feed appears as a background when passthrough is enabled
-* Webcam feed stops and hides when passthrough is disabled
-* Controlled by the same passthrough toggle button
+### 📷 Webcam Passthrough Simulation
+- Uses Unity's `WebCamTexture`
+- Displays the webcam feed as the background when passthrough is enabled
+- Stops and hides the webcam feed when passthrough is disabled
+- Provides a hardware-independent way to demonstrate the passthrough concept
 
 ---
 
-## Technical Approach
+## 🛠️ Tech Stack
 
-* **Unity Engine** with C#
-* UI implemented using Unity’s Canvas system
-* Runtime logic handled through modular C# scripts
-* Passthrough logic and webcam simulation are kept separate for clarity
-* Designed to be easily extendable for real XR hardware in the future
+| Technology | Usage |
+|------------|-------|
+| **Unity** | Application and interface development |
+| **C#** | Runtime and interaction logic |
+| **WebCamTexture** | Webcam-based passthrough simulation |
+| **Unity Canvas UI** | Interface and user interaction |
+| **OpenXR Concepts** | Simulated passthrough behaviour |
+| **Git / GitHub** | Version control |
 
 ---
+
+## 🧩 High-Level Structure
+
+```text
+XR Home Interface
+│
+├── Home Screen UI
+│   ├── Application Buttons
+│   ├── Brightness Controls
+│   └── Volume Controls
+│
+├── System Information
+│   └── Live Date & Time
+│
+├── Passthrough System
+│   ├── Toggle State
+│   └── Simulated OpenXR Behaviour
+│
+└── Webcam Simulation
+    ├── WebCamTexture
+    ├── Background Display
+    └── Enable / Disable Logic
