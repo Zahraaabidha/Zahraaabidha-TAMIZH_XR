@@ -8,7 +8,7 @@ A Unity-based XR-style home interface featuring interactive system controls, liv
 
 ## ✨ Overview
 
-This project explores the design of an **XR-style home interface** inspired by system menus used in immersive environments.
+This project explores the design of an **XR-style home interface** inspired by system menus used in immersive environments.  
 
 The interface brings together application shortcuts, system controls, live information, and a passthrough mode within a single interactive screen.
 
